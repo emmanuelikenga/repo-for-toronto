@@ -85,6 +85,33 @@
         </tr>
       </table>
     </section>
+
+    <!-- Contact Form -->
+    <section>
+      <h2>Tell Us About Your Toronto</h2>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Ada Smith" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="favspot">Favorite Spot in Toronto:</label>
+        <input type="text" id="favspot" name="favspot" placeholder="e.g. Distillery District" required>
+
+        <label for="reason">Reason for Visiting:</label>
+        <select id="reason" name="reason">
+          <option value="tourism">Tourism</option>
+          <option value="education">Education</option>
+          <option value="work">Work</option>
+        </select>
+
+        <label for="message">Your Story:</label>
+        <textarea id="message" name="message" placeholder="Share your Toronto story here..." rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </aside>
 
   <footer>
