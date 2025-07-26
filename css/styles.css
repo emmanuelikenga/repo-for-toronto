@@ -1,151 +1,220 @@
-/* Base Styles */
+/* 
+  Author: Ikenga Emmanuel 
+  Student ID: 8996304 
+  Description: This CSS file styles the Toronto webpage using various techniques including float layout, typography, form styling, and responsive design per assignment requirements.
+*/
+
+/* === ROOT ELEMENT === */
+/* Type: Element Selector */
+html {
+  font: italic small-caps bold 20px/1.5 Arial, sans-serif;
+  background-color: #f2f2f2; /* Light gray background for the entire page */
+}
+
+/* === BODY STYLING === */
+/* Type: Element Selector */
 body {
-  background-color: #0e0e0e;
-  color: #f4f4f4;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto; /* Center content */
+  padding: 2rem;
+  border: 0.2rem solid #ccc;
+  background-color: #ffffff; /* White background for content area */
 }
 
+/* === PAGE LAYOUT WITH FLOATS === */
+main, aside {
+  padding: 1rem; /* Padding for content spacing */
+}
+
+/* Float layout for 70/30 split */
+/* Type: Element Selector */
+main {
+  float: left;
+  width: 70%;
+}
+
+aside {
+  float: right;
+  width: 30%;
+}
+
+/* Clear floats on footer */
+footer {
+  clear: both;
+}
+
+/* === HEADER & FOOTER STYLING === */
+/* Type: Element Selector */
 header, footer {
-  background-color: #1a1a1a;
   text-align: center;
-  padding: 20px;
-  color: #ffffff;
+  background: linear-gradient(to right, #4682B4, #5F9EA0); /* Blue gradient */
+  color: white;
+  padding: 1rem;
 }
 
+/* Increase header font */
 header h1 {
-  font-size: 2.5em;
-  margin: 0;
-  color: #00bfff;
+  font-size: 2.5rem;
 }
 
-.author {
-  font-size: 0.9em;
-  color: #999;
+/* Decrease footer font */
+footer p {
+  font-size: 0.8rem;
 }
 
-section {
-  padding: 20px;
-  margin: 20px;
-  background-color: #1c1c1c;
-  border-radius: 8px;
-}
-
-h2 {
-  color: #00bfff;
-  margin-top: 0;
-}
-
-/* Gallery */
-.gallery {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery img {
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Blockquote */
-blockquote {
+/* Section Headings */
+section h2 {
+  color: #2a2a2a;
+  font-variant: small-caps;
   font-style: italic;
-  border-left: 5px solid #00bfff;
-  padding-left: 15px;
-  color: #ccc;
-}
-
-/* Quote */
-.quote {
-  font-size: 1.2em;
-  color: #ffcc00;
-}
-
-/* Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-th, td {
-  border: 1px solid #555;
-  padding: 10px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
   text-align: left;
 }
 
-th {
-  background-color: #2d2d2d;
-  color: #00bfff;
+/* === BLOCKQUOTE STYLING === */
+/* Type: Element Selector */
+blockquote {
+  font-style: italic;
+  background-color: #eef6ff;
+  padding: 1rem;
+  border-left: 0.5rem solid #4682B4;
+  width: 80%;
+  margin: 2rem auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-/* Links */
+/* === GALLERY IMAGES === */
+/* Type: Class Selector */
+.gallery img {
+  display: block;
+  width: 90%;
+  margin: 1rem auto;
+  border: 0.2rem solid #ccc;
+  border-radius: 0.5rem;
+}
+
+/* === VIDEO IFRAME === */
+/* Type: Element Selector */
+iframe {
+  display: block;
+  width: 100%;
+  border: 0.3rem solid #5F9EA0;
+  margin: 1rem auto;
+}
+
+/* === LOCAL QUOTE SECTION === */
+/* Type: Class Selector */
+.quote {
+  border: 0.2rem solid #ccc;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 80%;
+  font-family: 'Courier New', monospace;
+  font-style: italic;
+  color: #333333;
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* === LIST + LINKS === */
+/* Type: Pseudo-class Selectors */
 ul {
-  list-style-type: square;
-  padding-left: 20px;
+  list-style-type: none;
+  padding: 0;
 }
 
-a {
-  color: #00bfff;
+a:link {
+  color: #0066cc;
   text-decoration: none;
+}
+
+a:visited {
+  color: #800080;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #FF4500;
 }
 
-/* Video */
-iframe {
-  max-width: 100%;
-  border-radius: 10px;
-  border: 2px solid #444;
+a:active {
+  color: #FF0000;
 }
 
-/* Form Section */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* === TABLE STYLING === */
+/* Type: Element Selector */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
 }
 
-label {
+th {
+  text-align: left;
   font-weight: bold;
-  color: #00ffcc;
+  font-variant: small-caps;
+  color: white;
+  background-color: #4682B4;
+  padding: 1rem;
 }
 
-input, select, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  background-color: #333;
-  color: #fff;
+td {
+  padding: 1rem;
+  border: 0.1rem solid #ccc;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: #aaa;
+/* Alternate row colors */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-button[type="submit"] {
-  background-color: #00bfff;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  font-size: 1em;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Highlight rows on hover */
+tr:hover {
+  background-color: #d3e0ea;
 }
 
-button[type="submit"]:hover {
-  background-color: #008fcc;
+/* === FORM STYLING === */
+/* Type: Form + Class Selectors */
+form label {
+  font-variant: small-caps;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 0.8rem;
+  border: 0.2rem solid #ccc;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* === RESPONSIVE DESIGN === */
+/* Type: Media Query */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  main, aside {
+    float: none;
+    width: 100%;
+  }
+
+  blockquote,
+  .quote,
+  iframe {
+    width: 95%;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
 }
